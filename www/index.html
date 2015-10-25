@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <style>
+      .angular-google-map-container {
+          width: 100%;
+          height: 504px;
+      }
+    </style>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <!-- <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet"> -->
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/cart/cart.module.js"></script>
+    <script src="app/cart/cart.controller.js"></script>
+    <script src="app/cart/cart.service.js"></script>
+    <script src="app/cart/cart-item.directive.js"></script>
+    <script src="app/products/products.module.js"></script>
+    <script src="app/products/products.controller.js"></script>
+    <script src="app/products/product.directive.js"></script>
+    <script src="app/products/product.service.js"></script>
+    <script src="app/receipt/receipt.module.js"></script>
+    <script src="app/receipt/receipt.service.js"></script>
+    <script src="app/receipt/receipt.controller.js"></script>
+    <script src="app/tab/tab.module.js"></script>
+    <script src="app/tab/tab.controller.js"></script>
+    <script src="app/data/data.module.js"></script>
+    <script src="app/data/data.service.js"></script>
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+    <div>
+      <div>
+          <ion-nav-bar class="bar-positive" align-title="center">
+          </ion-nav-bar>
+          <ion-nav-view></ion-nav-view>
+      </div>
+    </div>
+  </body>
+</html>

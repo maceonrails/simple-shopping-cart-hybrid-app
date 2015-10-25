@@ -1,0 +1,19 @@
+<ion-view title="Cart">
+	<ion-nav-buttons side="primary">
+		<div class="buttons">
+	        <button class="button button-icon icon ion-ios-minus-outline"
+	          	ng-click="vm.showDelete = !vm.showDelete">
+	        </button>
+      	</div>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+    	<ion-list show-delete="vm.showDelete">
+    		<cb-cart-item item="item" ng-repeat="item in vm.cart"></cb-cart-item>
+    	</ion-list>
+    	<div class="padding">
+	    	<a href="#/receipt" class="button button-block button-positive" ng-if="vm.cart.length > 0">
+			  Print out Receipt
+			</a>
+		</div>
+    </ion-content>
+</ion-view>

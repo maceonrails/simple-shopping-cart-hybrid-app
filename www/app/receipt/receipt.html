@@ -1,0 +1,28 @@
+<ion-view title="Receipt">
+  <ion-nav-buttons side="primary">
+		<div class="buttons">
+        <a class="button button-icon icon ion-ios-arrow-back" href="#/cart">
+        	Back
+        </a>
+    	</div>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+  	<ion-list>
+  		<ion-item item="item" ng-repeat="item in vm.cart">
+				{{ item.quantity }} {{ vm.getFullItemInfo(item) }}
+				<span class="item-note">
+			    {{ vm.getPriceWithTaxes(item) }}
+			  </span>
+  		</ion-item>
+  	</ion-list>
+  	<ion-list>
+  		<ion-item>
+				Sales Taxes: <span class="item-note">{{ vm.getTotalTaxes(vm.cart) }}</span>
+  		</ion-item>
+  		<ion-item>
+  			Total: <span class="item-note">{{ vm.getTotalSales(vm.cart) }}</span>
+  		</ion-item>
+  	</ion-list>
+	</div>
+  </ion-content>
+</ion-view>

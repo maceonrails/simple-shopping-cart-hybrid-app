@@ -1,0 +1,7 @@
+<ion-item class="item-remove-animate">
+  <input type="number" ng-model="item.quantity" min="1" class="inline-form"> {{ vm.getFullItemInfo(item) }}
+  <span class="item-note">
+    {{ vm.getTotalPrice(item) | number:2 }}
+  </span>
+  <ion-delete-button class="ion-minus-circled" ng-click="vm.removeFromCart(item)"></ion-delete-button>
+</ion-item>

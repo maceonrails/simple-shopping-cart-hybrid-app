@@ -1,0 +1,17 @@
+<div class="list card">
+    <div class="item item-divider">
+        {{vm.fullName}} <span class="item-note">Price: {{vm.product.price | number:2}}</span>
+    </div>
+    <div class="item item-body">
+        <img ng-src="http://lorempixel.com/250/150/" width="100%" height="auto" style="width: 100%; height: auto;">
+        <form class="list">
+            <label class="item item-input" name="quantity">
+                <input type="number" placeholder="add quantity" min="1" ng-model="vm.quantity">
+                <span class="item-note">
+                  {{vm.product.unit.name}}
+                </span>
+            </label>
+            <button class="button button-positive button-block" ng-click="addToCart(vm.product, vm.quantity)">Add to cart</button>
+        </form>
+    </div>
+</div>
